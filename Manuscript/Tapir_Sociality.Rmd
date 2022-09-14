@@ -1,0 +1,45 @@
+---
+title: "Tapir Sociality"
+output: word_document
+date: "2022-09-14"
+---
+METHODS
+Movement data
+The tracking data were collected in southern Brazil in the Pantanal biome as part of the Lowland Tapir Conservation Initiative.  Tapirs were captured by darting from a distance, or by darting after using box or pitfall traps to restrain their movement. Animals were anesthetized following by Medici et al. (2014) and Fernandes-Santos et al. (2020). Reversal agents were administrated at the end of procedures. The procedures carried out during immobilization included the subcutaneous insertion of a microchip, morphometric measurements, sex and age class determination, physical examination, collection of biological samples for health and genetic studies, and placement of a telemetry collar on adults.
+A total of 46 tapirs were tracked in the Pantanal biome between 2008 until 2019. Movement data was collected using VHF tracking (Telonics® MOD500) and GPS tracking (Telonics® TGW SOB and GPS IRIDIUM models).  Tapirs equipped with VHF collars were monitored for 5 days per month with data collection concentrated during crepuscular times (at dawn, between 04:00–07:00 h, and at dusk between 17:00–20:00 h) as these periods are the two main peaks of tapir activity (Medici 2011). Each tapir was located every 30 min during the sampling periods. GPS collars were programmed to obtain a fix every hour and operated for a median of 15.4 months across all tagged tapirs. GPS fix success rates were 75% for our study area. Complementary to the tapir location data, we collected 883 measurements from tags in fixed locations in order to calibrate the measurement error of the GPS tracking collars.
+
+Data calibration and cleaning
+We used location data that was previously filtered and cleaned by Medici et al. (2022). To check for potential outliers that remained present in the data, we used the ctmm R package to plot the variogram for each tapir against the error and removed data outside confidence intervals.
+
+Home range estimation and overlap
+To understand the degree of relatedness among family units and individuals, we first calculated individual home ranges for each tapir. We did this using the Continuous-Time Movement Model (CTMM) R package using the ctmm.select function. This function fits a series of CTMMs to location data using perturbative Hybrid Residual Maximum Likelihood pHREML (Fleming et al 2019) and chooses the best model using small-sample-sized corrected Akaike’s Information Criterion (AICc). The models used in this package are not sensitive to sampling frequency and they account for spatial and temporal autocorrelation (Blackwell et al. 2016, Fleming et al. 2014), which makes them robust regardless of the sample size of the data and frequency (Fleming et al. 2018). We calculated the 95% Home range area (km2) using Autocorrelated Kernel Density Estimation (hereon AKDE) [Fleming and Calabrese 2017, Noonan et al. 2019) and we calculated overlap values between individuals and family units using the overlap function in ctmm. We then tabulated these values in a matrix for all 46 individuals assessed. 
+
+RESULTS
+
+Overlap between and within family units
+Most tapirs showed some degree of overlap, within and between family units (Figure 1). However, the amount of overlap was significantly higher within family units (x̄ = 0.69) as compared to the overlap between different families (x̄ = 0.12, Figure 2). Within family units, overlap was greater within pairs (x̄ = 0.79) as compared to parents-offspring (x̄ = 0.65) and offspring (x̄ = 0.61)) (Figure 3).
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.[@citatiojn]
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
