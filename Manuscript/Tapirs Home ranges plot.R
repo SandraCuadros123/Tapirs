@@ -82,11 +82,16 @@ ggplot(t_relatedness_detailed, aes(x= Relationship, y= value)) +
 
 #Extract stats data
 #Family units
-t_relatedness_bind_Within <- t_relatedness_bind [which(t_relatedness_bind$Relatedness=='Within'),]
-summary(t_relatedness_bind_Within)
+t_relatedness_Within <- t_relatedness [which(t_relatedness$Relatedness=='Within'),]
+summary(t_relatedness_Within)
 
-t_relatedness_bind_Between <- t_relatedness_bind [which(t_relatedness_bind$Relatedness=='Between'),]
-summary(t_relatedness_bind_Between)
+t_relatedness_Between <- t_relatedness [which(t_relatedness$Relatedness=='Between'),]
+summary(t_relatedness_Between)
+
+
+
+
+
 
 #Type of relationship
 t_relationship_pair <- t_relatedness_detailed [which(t_relatedness_detailed$Relationship =='Pair'),]
