@@ -17,7 +17,7 @@ To understand the degree of relatedness among family units and individuals, we f
 RESULTS
 
 Overlap between and within family units
-Most tapirs showed some degree of overlap, within and between family units (Figure 1). However, the amount of overlap was significantly higher within family units (x̄ = 0.69) as compared to the overlap between different families (x̄ = 0.12, Figure 2). Within family units, overlap was greater within pairs (x̄ = 0.79) as compared to parents-offspring (x̄ = 0.65) and offspring (x̄ = 0.61)) (Figure 3).
+Most tapirs showed some degree of overlap, within and between family units (Figure 1). However, the amount of overlap was significantly higher (p<0.05) within family units (x̄ = 0.69) as compared to the overlap between different families (x̄ = 0.12, Figure 2). Within family units, overlap was greater within pairs (x̄ = 0.79) as compared to parents-offspring (x̄ = 0.65) and offspring (x̄ = 0.61)) (Figure 3).
 
 
 ```{r setup, include=FALSE}
